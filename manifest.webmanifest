@@ -4,7 +4,7 @@
   "theme_color": "#2196f3",
   "background_color": "#2196f3",
   "display": "standalone",
-  "Scope": "/cataloguetaba/",
+  "Scope": "/",
   "start_url": "./",
   "serviceworker": "sw.js",
   "icons": [
