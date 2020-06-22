@@ -9,6 +9,23 @@ self.addEventListener('install', function(event) {
 		'manifest.webmanifest',
 		'adultes.html',
 		'adultes_romans.html',
+		'adultes_policiers.html',
+		'adultes_dvd.html',
+		'adultes_sciencefiction.html',
+		'ados.html',
+		'ados_policiers.html',
+		'ados_romans.html',
+		'ados_sciencefiction.html',
+		'enfants.html',
+		'enfants_albums.html',
+		'enfants_documentaires.html',
+		'enfants_dvd.html',
+		'enfants_tout-petits.html',
+		'jeunes.html',
+		'jeunes_BD.html',
+		'jeunes_documentaires.html',
+		'jeunes_premierelecture.html',
+		'jeunes_romans.html',
 		'croix.jpg'
 		]);
 		})
