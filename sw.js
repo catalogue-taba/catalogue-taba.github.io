@@ -34,6 +34,7 @@ self.addEventListener('install', function(event) {
 self.addEventListener('fetch', function(event) {
 	console.log('fonction event');
 	event.respondWith(caches.match(event.request).then(function(response) {
+		console.log('reponse reseau')
 		// caches.match() always resolves
 		// but in case of success response will have value
 		if (response !== undefined) {
