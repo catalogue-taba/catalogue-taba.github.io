@@ -31,22 +31,16 @@ self.addEventListener('install', function(event) {
 		})
 		);
 		});
-self.addEventListener('fetch', function(event) {
-	console.log('fonction event');
-	event.respondWith(
-		caches.match(event.request).then(function(response) {
-		console.log('reponse reseau'+event.request.url)
-	
-				return fetch(event.request).then(function (response) {
-					// response may be used only once
-					// we need to save clone to put one copy in cache
-					// and serve second one
-					
-					return caches.open('test_manifest-v7').then(function (cache) {
-						cache.put(event.request, responseClone);
-						});
-						return response;
-						});
+self.addEventListener('fetch', (e) => {
+  e.respondWith(
+    caches.match(e.request).then((r) => {
+          console.log('[Service Worker] Récupération de la ressource: '+e.request.url);
+      return r || fetch(e.request).then((response) => {
+                return caches.open(cacheName).then((cache) => {
+          console.log('[Service Worker] Mise en cache de la nouvelle ressource: '+e.request.url);
+          cache.put(e.request, response.clone());
+          return response;
+        });
       });
     })
   );
