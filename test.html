@@ -95,24 +95,24 @@
   </head>
   <body>
     <h2>Créer Boîte Modale</h2>
-    <button class="example">Cliquez ici pour voir le modal!</button>
-    <div class="modal">
-      <div class="modal-content">
-        <span class="close-button">&times;</span>
+    <button class="example" id="example1">Cliquez ici pour voir le modal!</button>
+    <div class="modal" id="modal1">
+      <div class="modal-content" id="modal-content1">
+        <span class="close-button" id="close-button1">&times;</span>
         <h2>Ceci est un Modal</h2>
       </div>
     </div>
     <script>
-      var modal = document.querySelector(".modal");
-          var trigger = document.querySelector(".example");
-          var closeButton = document.querySelector(".close-button");
+      var modal = document.querySelector("#modal1");
+          var trigger = document.querySelector("#example1");
+          var closeButton = document.querySelector("#close-button1");
       
           function toggleModal() {
               modal.classList.toggle("show-modal");
           }
       
           function windowOnClick(event) {
-              if (event.target === modal) {
+              if (event.target === modal1) {
                   toggleModal();
               }
           }
