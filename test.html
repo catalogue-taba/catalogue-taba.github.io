@@ -181,14 +181,14 @@
 
     <h2>Créer Boîte Modale</h2>
     <button class="example">Cliquez ici pour voir le modal!</button>
-    <div class="modal">
+    <div class="modal" id="modal1">
       <div class="modal-content">
         <span class="close-button">&times;</span>
         <h2>Ceci est un Modal</h2>
       </div>
     </div>
     <script>
-      var modal = document.querySelector(".modal");
+      var modal = document.getElementById('modal1');
           var trigger = document.querySelector(".example");
           var closeButton = document.querySelector(".close-button");
       
