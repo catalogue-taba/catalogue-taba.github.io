@@ -175,40 +175,6 @@
       }
     </style>
 
-		
-    <h2>Créer Boîte Modale 1a</h2>
-    <button class="example" id="example1">Cliquez ici pour voir le modal!</button>
-    <div class="modal" id="modal1">
-      <div class="modal-content" id="modal-content1">
-        <span class="close-button" id="close-button1">&times;</span>
-        <h2>Ceci est un Modal</h2>
-      </div>
-    </div>
-    <script>
-      var modal = document.getElementById('modal1');
-          var trigger = document.getElementById('example1');
-          var closeButton = document.getElementById('close-button1');
-      
-          function toggleModal() {
-              modal.classList.toggle("show-modal");
-          }
-      
-          function windowOnClick(event) {
-              if (event.target === modal) {
-                  toggleModal();
-              }
-          }
-      
-          trigger.addEventListener("click", toggleModal);
-          closeButton.addEventListener("click", toggleModal);
-          window.addEventListener("click", windowOnClick); 
-    </script>
-	  
-	  
-	  
-	  
-	  
-	  
 	  
 	  
 	  
