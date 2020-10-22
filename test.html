@@ -50,33 +50,85 @@
 		
 		
 		
-		
-		<div class="article">
-		<p class="auteur">Allenou Stéphanie bis</p>
-		<p class="titre">Mère épuisée</p>
-		<p class="année">2011</p>
-		
-      <div class="modal" id="DialogExample1" >
-	  <p class="auteur">Allenou Stéphanie       <span class="titre_dialog">Mère épuisée</span></p>
-	  
+		<style>
+      .modalDialog {
+      position: fixed;
+      font-family: Arial, Helvetica, sans-serif;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background: rgba(0,0,0,0.1);
+      z-index: 99999;
+      opacity:0;
+      -webkit-transition: opacity 400ms ease-in;
+      -moz-transition: opacity 400ms ease-in;
+      transition: opacity 400ms ease-in;
+      pointer-events: none;
+      }
+      .modalDialog:target {
+      opacity:1;
+      pointer-events: auto;
+      }
+      .modalDialog > div {
+      width: 400px;
+      position: relative;
+      margin: 10% auto;
+      padding: 5px 20px 13px 20px;
+      border-radius: 10px;
+      background: -moz-linear-gradient(#2edbe8, #01a6b2);
+      background: -webkit-linear-gradient(#2edbe8, #01a6b2);
+      background: -o-linear-gradient(#2edbe8, #01a6b2);
+      }
+      .close {
+      background: #606061;
+      color: #FFFFFF;
+      line-height: 25px;
+      position: absolute;
+      right: -12px;
+      text-align: center;
+      top: -10px;
+      width: 24px;
+      text-decoration: none;
+      font-weight: bold;
+      -webkit-border-radius: 12px;
+      -moz-border-radius: 12px;
+      border-radius: 12px;
+      -moz-box-shadow: 1px 1px 3px #000;
+      -webkit-box-shadow: 1px 1px 3px #000;
+      box-shadow: 1px 1px 3px #000;
+      }
+      .close:hover { background: #6ed1d8; }
+    </style>
 
-        <p>
-          Le récit poignant d'une mère ordinaire qui ose dire comment au fil des jours elle s'épuise, s'isole, se sent envahie de doutes et de peurs. Un témoignage qui rejoint le commun de chaque femme prise entre le bonheur d'être mère et la difficulté de vivre dans une société peu encline à entendre cette part non idéale et obscure de la maternité.
-        </p>
-        <button id="hide1" class="bouton_fermer">x</button>
+		
+    <h2>Créer Boîte Modale</h2>
+    <a href="#openModal1">Boîte</a>
+    <div id="openModal1" class="modalDialog">
+      <div>
+        <a href="#close1" title="Close" class="close">X</a>
+        <h2>Boîte modale </h2>
+        <p>Cette boîte modale est créée en utilisant les pouvoirs de CSS3.</p>
       </div>
-	  
-      <button id="show1" class="bouton_ouvrir"><img src="https://www.babelio.com/couv/bm_32054_1473664.jpg" alt=""/></button>
+      <a href="#close1" title="Close" class="close">x</a>
     </div>
-    <script type="text/JavaScript">
-      (function() {  
-             var modal = document.getElementById('DialogExample1');  
-             document.getElementById('show1').onclick = function() { modal.showModal();  
-         }; 
-           document.getElementById('hide1').onclick = function() { modal.close();  
-        }; 
-      })();
-    </script>
+		
+		
+	 <h2>Créer Boîte Modale</h2>
+    <a href="#openModal2">Boîte</a>
+    <div id="openModal2" class="modalDialog">
+      <div>
+        <a href="#close2" title="Close" class="close">X</a>
+        <h2>Boîte modale </h2>
+        <p>Cette boîte modale est créée en utilisant les pouvoirs de CSS3.</p>
+      </div>
+      <a href="#close2" title="Close" class="close">x</a>
+    </div>	
+	  
+	  
+	  
+	  
+		
 		
 		
 		
