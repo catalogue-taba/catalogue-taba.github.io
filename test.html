@@ -103,16 +103,16 @@
       </div>
     </div>
     <script>
-      var modal = document.querySelector("#modal1");
-          var trigger = document.querySelector("#example1");
-          var closeButton = document.querySelector("#close-button1");
+      var modal = document.getElementById('modal1');
+          var trigger = document.getElementById('example1');
+          var closeButton = document.getElementById('close-button1');
       
           function toggleModal() {
               modal.classList.toggle("show-modal");
           }
       
           function windowOnClick(event) {
-              if (event.target === modal1) {
+              if (event.target === modal) {
                   toggleModal();
               }
           }
