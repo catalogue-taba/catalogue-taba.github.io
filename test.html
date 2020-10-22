@@ -50,80 +50,6 @@
 		
 		
 		
-		<style>
-      .modalDialog {
-      position: fixed;
-      font-family: Arial, Helvetica, sans-serif;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      background: rgba(0,0,0,0.1);
-      z-index: 99999;
-      opacity:0;
-      -webkit-transition: opacity 400ms ease-in;
-      -moz-transition: opacity 400ms ease-in;
-      transition: opacity 400ms ease-in;
-      pointer-events: none;
-      }
-      .modalDialog:target {
-      opacity:1;
-      pointer-events: auto;
-      }
-      .modalDialog > div {
-      width: 400px;
-      position: relative;
-      margin: 10% auto;
-      padding: 5px 20px 13px 20px;
-      border-radius: 10px;
-      background: -moz-linear-gradient(#2edbe8, #01a6b2);
-      background: -webkit-linear-gradient(#2edbe8, #01a6b2);
-      background: -o-linear-gradient(#2edbe8, #01a6b2);
-      }
-      .close {
-      background: #606061;
-      color: #FFFFFF;
-      line-height: 25px;
-      position: absolute;
-      right: -12px;
-      text-align: center;
-      top: -10px;
-      width: 24px;
-      text-decoration: none;
-      font-weight: bold;
-      -webkit-border-radius: 12px;
-      -moz-border-radius: 12px;
-      border-radius: 12px;
-      -moz-box-shadow: 1px 1px 3px #000;
-      -webkit-box-shadow: 1px 1px 3px #000;
-      box-shadow: 1px 1px 3px #000;
-      }
-      .close:hover { background: #6ed1d8; }
-    </style>
-
-		
-    <h2>Créer Boîte Modale</h2>
-    <a href="#openModal1">Boîte</a>
-    <div id="openModal1" class="modalDialog">
-      <div>
-        <a href="#close1" title="Close" class="close">X</a>
-        <h2>Boîte modale </h2>
-        <p>Cette boîte modale est créée en utilisant les pouvoirs de CSS3. boite 1</p>
-      </div>
-      <a href="#close1" title="Close" class="close">x</a>
-    </div>
-		
-		
-	 <h2>Créer Boîte Modale 2</h2>
-    <a href="#openModal2">Boîte</a>
-    <div id="openModal2" class="modalDialog">
-      <div>
-        <a href="#close2" title="Close" class="close">X</a>
-        <h2>Boîte modale </h2>
-        <p>Cette boîte modale est créée en utilisant les pouvoirs de CSS3. boite 2</p>
-      </div>
-      <a href="#close2" title="Close" class="close">x</a>
-    </div>	
 	  
 	  
 	  
@@ -179,14 +105,26 @@
 	  
 	  
 
-    <h2>Créer Boîte Modale</h2>
-    <button class="example" id="example1">Cliquez ici pour voir le modal!</button>
+    
+		<div class="article">
+		<p class="auteur">Allenou Stéphanie</p>
+		<p class="titre">Mère épuisée</p>
+		<p class="année">2011</p>
+			
+    <button class="example" id="example1"><img src="https://www.babelio.com/couv/bm_32054_1473664.jpg" alt=""/></button>
     <div class="modal" id="modal1">
       <div class="modal-content" id="modal1">
         <span class="close-button" id="close-button1">&times;</span>
-        <h2>Ceci est un Modal</h2>
+        
+	    <p class="auteur">Allenou Stéphanie       <span class="titre_dialog">Mère épuisée</span></p>
+	  
+
+        <p>
+          Le récit poignant d'une mère ordinaire qui ose dire comment au fil des jours elle s'épuise, s'isole, se sent envahie de doutes et de peurs. Un témoignage qui rejoint le commun de chaque femme prise entre le bonheur d'être mère et la difficulté de vivre dans une société peu encline à entendre cette part non idéale et obscure de la maternité.
+        </p>  
       </div>
     </div>
+		
     <script>
       var modal1 = document.getElementById('modal1');
           var trigger = document.getElementById('example1');
@@ -224,11 +162,11 @@
           var closeButton = document.getElementById('close-button2');
       
           function toggleModal() {
-              modal.classList.toggle("show-modal");
+              modal2.classList.toggle("show-modal");
           }
       
           function windowOnClick(event) {
-              if (event.target === modal) {
+              if (event.target === modal2) {
                   toggleModal();
               }
           }
