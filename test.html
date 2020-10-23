@@ -115,17 +115,28 @@
 		
 		
 		<div class="article">
-		<h2>Créer Boîte Modale 2</h2>
-    <button class="example" id="example2">Cliquez ici pour voir le modal!</button>
+		<p class="auteur">Allenou Stéphanie</p>
+		<p class="titre">Mère épuisée 2</p>
+		<p class="année">2011</p>
+			
+    <button class="example" id="example2"><img src="https://www.babelio.com/couv/bm_32054_1473664.jpg" alt=""/></button>
     <div class="modal" id="modal2">
-      <div class="modal-content">
+      <div class="modal-content" id="modal2">
         <span class="close-button" id="close-button2">&times;</span>
-        <h2>Ceci est un Modal boite 2</h2>
+        
+	    <p class="auteur">Allenou Stéphanie       <span class="titre_dialog">Mère épuisée</span></p>
+	  
+
+        <p>
+          Le récit poignant d'une mère ordinaire qui ose dire comment au fil des jours elle s'épuise, s'isole, se sent envahie de doutes et de peurs. Un témoignage qui rejoint le commun de chaque femme prise entre le bonheur d'être mère et la difficulté de vivre dans une société peu encline à entendre cette part non idéale et obscure de la maternité.
+        </p>  
       </div>
     </div>
-		</div>
+		</div>	
+			
+		
     <script>
-      var modal = document.getElementById('modal2');
+      var modal2 = document.getElementById('modal2');
           var trigger = document.getElementById('example2');
           var closeButton = document.getElementById('close-button2');
       
@@ -135,6 +146,179 @@
       
           function windowOnClick(event) {
               if (event.target === modal2) {
+                  toggleModal();
+              }
+          }
+      
+          trigger.addEventListener("click", toggleModal);
+          closeButton.addEventListener("click", toggleModal);
+          window.addEventListener("click", windowOnClick); 
+    </script>
+		
+		
+		<div class="article">
+		<p class="auteur">Allenou Stéphanie</p>
+		<p class="titre">Mère épuisée 3</p>
+		<p class="année">2011</p>
+			
+    <button class="example" id="example3"><img src="https://www.babelio.com/couv/bm_32054_1473664.jpg" alt=""/></button>
+    <div class="modal" id="modal3">
+      <div class="modal-content" id="modal3">
+        <span class="close-button" id="close-button3">&times;</span>
+        
+	    <p class="auteur">Allenou Stéphanie       <span class="titre_dialog">Mère épuisée</span></p>
+	  
+
+        <p>
+          Le récit poignant d'une mère ordinaire qui ose dire comment au fil des jours elle s'épuise, s'isole, se sent envahie de doutes et de peurs. Un témoignage qui rejoint le commun de chaque femme prise entre le bonheur d'être mère et la difficulté de vivre dans une société peu encline à entendre cette part non idéale et obscure de la maternité.
+        </p>  
+      </div>
+    </div>
+		</div>	
+			
+		
+    <script>
+      var modal3 = document.getElementById('modal3');
+          var trigger = document.getElementById('example3');
+          var closeButton = document.getElementById('close-button3');
+      
+          function toggleModal() {
+              modal3.classList.toggle("show-modal");
+          }
+      
+          function windowOnClick(event) {
+              if (event.target === modal3) {
+                  toggleModal();
+              }
+          }
+      
+          trigger.addEventListener("click", toggleModal);
+          closeButton.addEventListener("click", toggleModal);
+          window.addEventListener("click", windowOnClick); 
+    </script>
+		
+		
+		
+		<div class="article">
+		<p class="auteur">Allenou Stéphanie</p>
+		<p class="titre">Mère épuisée 4</p>
+		<p class="année">2011</p>
+			
+    <button class="example" id="example4"><img src="https://www.babelio.com/couv/bm_32054_1473664.jpg" alt=""/></button>
+    <div class="modal" id="modal4">
+      <div class="modal-content" id="modal4">
+        <span class="close-button" id="close-button4">&times;</span>
+        
+	    <p class="auteur">Allenou Stéphanie       <span class="titre_dialog">Mère épuisée</span></p>
+	  
+
+        <p>
+          Le récit poignant d'une mère ordinaire qui ose dire comment au fil des jours elle s'épuise, s'isole, se sent envahie de doutes et de peurs. Un témoignage qui rejoint le commun de chaque femme prise entre le bonheur d'être mère et la difficulté de vivre dans une société peu encline à entendre cette part non idéale et obscure de la maternité.
+        </p>  
+      </div>
+    </div>
+		</div>	
+			
+		
+    <script>
+      var modal4 = document.getElementById('modal4');
+          var trigger = document.getElementById('example4');
+          var closeButton = document.getElementById('close-button4');
+      
+          function toggleModal() {
+              modal4.classList.toggle("show-modal");
+          }
+      
+          function windowOnClick(event) {
+              if (event.target === modal4) {
+                  toggleModal();
+              }
+          }
+      
+          trigger.addEventListener("click", toggleModal);
+          closeButton.addEventListener("click", toggleModal);
+          window.addEventListener("click", windowOnClick); 
+    </script>
+		
+		
+		
+		
+		<div class="article">
+		<p class="auteur">Allenou Stéphanie</p>
+		<p class="titre">Mère épuisée 5</p>
+		<p class="année">2011</p>
+			
+    <button class="example" id="example5"><img src="https://www.babelio.com/couv/bm_32054_1473664.jpg" alt=""/></button>
+    <div class="modal" id="modal5">
+      <div class="modal-content" id="modal5">
+        <span class="close-button" id="close-button5">&times;</span>
+        
+	    <p class="auteur">Allenou Stéphanie       <span class="titre_dialog">Mère épuisée</span></p>
+	  
+
+        <p>
+          Le récit poignant d'une mère ordinaire qui ose dire comment au fil des jours elle s'épuise, s'isole, se sent envahie de doutes et de peurs. Un témoignage qui rejoint le commun de chaque femme prise entre le bonheur d'être mère et la difficulté de vivre dans une société peu encline à entendre cette part non idéale et obscure de la maternité.
+        </p>  
+      </div>
+    </div>
+		</div>	
+			
+		
+    <script>
+      var modal5 = document.getElementById('modal5');
+          var trigger = document.getElementById('example5');
+          var closeButton = document.getElementById('close-button5');
+      
+          function toggleModal() {
+              modal5.classList.toggle("show-modal");
+          }
+      
+          function windowOnClick(event) {
+              if (event.target === modal5) {
+                  toggleModal();
+              }
+          }
+      
+          trigger.addEventListener("click", toggleModal);
+          closeButton.addEventListener("click", toggleModal);
+          window.addEventListener("click", windowOnClick); 
+    </script>
+		
+		
+		
+		
+		<div class="article">
+		<p class="auteur">Allenou Stéphanie</p>
+		<p class="titre">Mère épuisée 6</p>
+		<p class="année">2011</p>
+			
+    <button class="example" id="example6"><img src="https://www.babelio.com/couv/bm_32054_1473664.jpg" alt=""/></button>
+    <div class="modal" id="modal6">
+      <div class="modal-content" id="modal6">
+        <span class="close-button" id="close-button6">&times;</span>
+        
+	    <p class="auteur">Allenou Stéphanie       <span class="titre_dialog">Mère épuisée</span></p>
+	  
+
+        <p>
+          Le récit poignant d'une mère ordinaire qui ose dire comment au fil des jours elle s'épuise, s'isole, se sent envahie de doutes et de peurs. Un témoignage qui rejoint le commun de chaque femme prise entre le bonheur d'être mère et la difficulté de vivre dans une société peu encline à entendre cette part non idéale et obscure de la maternité.
+        </p>  
+      </div>
+    </div>
+		</div>	
+			
+		
+    <script>
+      var modal6 = document.getElementById('modal6');
+          var trigger = document.getElementById('example6');
+          var closeButton = document.getElementById('close-button6');
+      
+          function toggleModal() {
+              modal6.classList.toggle("show-modal");
+          }
+      
+          function windowOnClick(event) {
+              if (event.target === modal6) {
                   toggleModal();
               }
           }
