@@ -1,14 +1,25 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>Article : Une fenêtre modale accessible</title>
-  </head>
-  
-  <style>
-    // dialog overlay
-.c-dialog {
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <title>Fenêtre modale</title>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="googlebot" content="noindex, nofollow">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <script
+    type="text/javascript"
+    src="/js/lib/dummy.js"
+    
+  ></script>
+
+    <link rel="stylesheet" type="text/css" href="/css/result-light.css">
+
+
+  <style id="compiled-css" type="text/css">
+      .c-dialog {
   position: fixed;
   z-index: 100;
   top: 0;
@@ -19,30 +30,29 @@
   padding: 2.4rem;
   overflow-y: scroll;
   -webkit-overflow-scrolling: touch;
-  background-color: rgba(black, .75);
-  transition: .2s;
-}
+  background-color: rgba(0, 0, 0, 0.75);
+  transition: .2s; }
 
-// dialog box
 .c-dialog__box {
   flex: 1;
   max-width: 48rem;
   margin: auto;
   padding: 2.4rem;
-  background-color: white;
-}
+  background-color: white; }
 
-// hidden dialog
 .c-dialog[aria-hidden="true"] {
   visibility: hidden;
-  opacity: 0;
-}
+  opacity: 0; }
+
+    /* EOS */
   </style>
-  
+
+  <script id="insert"></script>
 
 
-
-<div class="js-page">
+</head>
+<body>
+    <div class="js-page">
   <main class="js-document">
     <button type="button" aria-haspopup="dialog" aria-controls="dialog">Ouvrir ma fenêtre modale</button>
   </main>
@@ -67,9 +77,11 @@
     </div>
   </div>
 </div>
-  
-  <script>
-    const triggers = document.querySelectorAll('[aria-haspopup="dialog"]');
+
+    <script type="text/javascript">//<![CDATA[
+
+
+const triggers = document.querySelectorAll('[aria-haspopup="dialog"]');
 const doc = document.querySelector('.js-document');
 const focusableElementsArray = [
   '[href]',
@@ -178,5 +190,23 @@ triggers.forEach((trigger) => {
     }
   }); 
 });
+
+
+  //]]></script>
+
+  <script>
+    // tell the embed parent frame the height of the content
+    if (window.parent && window.parent.parent){
+      window.parent.parent.postMessage(["resultsFrame", {
+        height: document.body.getBoundingClientRect().height,
+        slug: "6w5ju52v"
+      }], "*")
+    }
+
+    // always overwrite window.name, in case users try to set it manually
+    window.name = "result"
   </script>
+
+
+</body>
 </html>
