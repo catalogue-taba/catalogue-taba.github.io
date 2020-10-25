@@ -45,7 +45,11 @@
   visibility: hidden;
   opacity: 0; }
     .bouton_fermer {
-      border: 1px red solid; }
+      border: 1px red solid;
+    font-size: 3em;
+    position: relative;
+    top: -10px;
+    right: -10px; }
 
     /* EOS */
   </style>
@@ -72,7 +76,7 @@
       
       <div id="dialog2" role="dialog" aria-labelledby="dialog-title" aria-describedby="dialog-desc" aria-modal="true" aria-hidden="true" tabindex="-1" class="c-dialog">
     <div role="document" class="c-dialog__box">
-      <button type="button" aria-label="Fermer" title="Fermer cette fenêtre modale" data-dismiss="dialog2">X</button>
+      <button type="button" aria-label="Fermer" title="Fermer cette fenêtre modale" data-dismiss="dialog2" class="bouton_fermer">X</button>
       <h2 id="dialog-title">Ma fenêtre modale 2</h2>
       <p id="dialog-desc">Je suis une fenêtre modale accessible 2.</p>
     </div>
