@@ -48,23 +48,13 @@
   opacity: 0; }
     
     .bouton_fermer {
-      width: 50px;
-      height: 50px;
     font-size: 3em;
     position: absolute;
     top: -15px;
     right: -15px;
     border-radius: 50%;}
    
-    
-    .ombre {
-      width: 50px;
-      height: 50px;
-      border-radius: 50%;
-      background-color: grey;
-      position: absolute;
-      top: -13px;
-      right: -17px; }
+
 
     /* EOS */
   </style>
@@ -83,7 +73,6 @@
       
   <div id="dialog" role="dialog" aria-labelledby="dialog-title" aria-describedby="dialog-desc" aria-modal="true" aria-hidden="true" tabindex="-1" class="c-dialog">
     <div role="document" class="c-dialog__box">
-      <div class="ombre"></div>
       <button type="button" aria-label="Fermer" title="Fermer cette fenêtre modale" data-dismiss="dialog" class="bouton_fermer">X</button>
       <h2 id="dialog-title">Ma fenêtre modale</h2>
       <p id="dialog-desc">Je suis une fenêtre modale accessible.</p>
