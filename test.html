@@ -124,6 +124,54 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
+      
+      
+      
+      
+      document.addEventListener('DOMContentLoaded', () => { 
+  const triggers = document.querySelectorAll('[aria-haspopup="dialog2"]');
+  const doc = document.querySelector('.js-document');
+
+  const open = function (dialog2) {
+    dialog2.setAttribute('aria-hidden', false);
+    doc.setAttribute('aria-hidden', true);
+  };
+
+  const close = function (dialog2) {
+    dialog2.setAttribute('aria-hidden', true);
+    doc.setAttribute('aria-hidden', false);
+  };
+
+  triggers.forEach((trigger) => {
+    const dialog2 = document.getElementById(trigger.getAttribute('aria-controls'));
+    const dismissTriggers = dialog2.querySelectorAll('[data-dismiss]');
+
+    // open dialog
+    trigger.addEventListener('click', (event) => {
+      event.preventDefault();
+
+      open(dialog2);
+    });
+
+    // close dialog
+    dismissTriggers.forEach((dismissTrigger) => {
+      const dismissDialog = document.getElementById(dismissTrigger.dataset.dismiss);
+
+      dismissTrigger.addEventListener('click', (event) => {
+        event.preventDefault();
+
+        close(dismissDialog2);
+      });
+    });
+
+    window.addEventListener('click', (event) => {
+      if (event.target === dialog2) {
+        close(dialog2);
+      }
+    });
+  });
+});
+
 
   //]]></script>
 
