@@ -56,7 +56,7 @@
   <main class="js-document">
     <button type="button" aria-haspopup="dialog" aria-controls="dialog">Ouvrir ma fenêtre modale</button>
     
-    <button type="button" aria-haspopup="dialog2" aria-controls="dialog2">Ouvrir ma fenêtre modale 2 test</button>
+    <button type="button" aria-haspopup="dialog2" aria-controls="dialog2">Ouvrir ma fenêtre modale 2 retest</button>
   </main>
       
   <div id="dialog" role="dialog" aria-labelledby="dialog-title" aria-describedby="dialog-desc" aria-modal="true" aria-hidden="true" tabindex="-1" class="c-dialog">
@@ -137,13 +137,13 @@ document.addEventListener('DOMContentLoaded', () => {
     doc.setAttribute('aria-hidden', true);
   };
 
-  const close = function (dialog2) {
-    dialog2.setAttribute('aria-hidden', true);
+  const close = function (dialog) {
+    dialog.setAttribute('aria-hidden', true);
     doc.setAttribute('aria-hidden', false);
   };
 
   triggers.forEach((trigger) => {
-    const dialog2 = document.getElementById(trigger.getAttribute('aria-controls'));
+    const dialog = document.getElementById(trigger.getAttribute('aria-controls'));
     const dismissTriggers = dialog2.querySelectorAll('[data-dismiss]');
 
     // open dialog
@@ -165,8 +165,8 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     window.addEventListener('click', (event) => {
-      if (event.target === dialog2) {
-        close(dialog2);
+      if (event.target === dialog) {
+        close(dialog);
       }
     });
   });
