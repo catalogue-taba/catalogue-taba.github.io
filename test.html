@@ -66,7 +66,7 @@
   <main class="js-document">
     <button type="button" aria-haspopup="dialog" aria-controls="dialog">Ouvrir ma fenêtre modale</button>
     
-    <button type="button" aria-haspopup="dialog2" aria-controls="dialog2">Ouvrir ma fenêtre modale 2 retest</button>
+    <button type="button" aria-haspopup="dialog2" aria-controls="dialog2">Ouvrir ma fenêtre modale 2 test</button>
   </main>
       
   <div id="dialog" role="dialog" aria-labelledby="dialog-title" aria-describedby="dialog-desc" aria-modal="true" aria-hidden="true" tabindex="-1" class="c-dialog">
@@ -185,18 +185,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   //]]></script>
 
-  <script>
-    // tell the embed parent frame the height of the content
-    if (window.parent && window.parent.parent){
-      window.parent.parent.postMessage(["resultsFrame", {
-        height: document.body.getBoundingClientRect().height,
-        slug: "6w5ju52v"
-      }], "*")
-    }
-
-    // always overwrite window.name, in case users try to set it manually
-    window.name = "result"
-  </script>
+  
 
 
 </body>
