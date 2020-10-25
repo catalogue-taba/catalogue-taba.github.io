@@ -56,7 +56,7 @@
   <main class="js-document">
     <button type="button" aria-haspopup="dialog" aria-controls="dialog">Ouvrir ma fenêtre modale</button>
     
-    <button type="button" aria-haspopup="dialog2" aria-controls="dialog2">Ouvrir ma fenêtre modale 2 retest</button>
+    <button type="button" aria-haspopup="dialog2" aria-controls="dialog2">Ouvrir ma fenêtre modale 2 test</button>
   </main>
       
   <div id="dialog" role="dialog" aria-labelledby="dialog-title" aria-describedby="dialog-desc" aria-modal="true" aria-hidden="true" tabindex="-1" class="c-dialog">
@@ -69,7 +69,7 @@
       
       <div id="dialog2" role="dialog" aria-labelledby="dialog-title" aria-describedby="dialog-desc" aria-modal="true" aria-hidden="true" tabindex="-1" class="c-dialog">
     <div role="document" class="c-dialog__box">
-      <button type="button" aria-label="Fermer" title="Fermer cette fenêtre modale" data-dismiss="dialog">X</button>
+      <button type="button" aria-label="Fermer" title="Fermer cette fenêtre modale" data-dismiss="dialog2">X</button>
       <h2 id="dialog-title">Ma fenêtre modale 2</h2>
       <p id="dialog-desc">Je suis une fenêtre modale accessible 2.</p>
     </div>
@@ -137,13 +137,13 @@ document.addEventListener('DOMContentLoaded', () => {
     doc.setAttribute('aria-hidden', true);
   };
 
-  const close = function (dialog) {
-    dialog.setAttribute('aria-hidden', true);
+  const close = function (dialog2) {
+    dialog2.setAttribute('aria-hidden', true);
     doc.setAttribute('aria-hidden', false);
   };
 
   triggers.forEach((trigger) => {
-    const dialog = document.getElementById(trigger.getAttribute('aria-controls'));
+    const dialog2 = document.getElementById(trigger.getAttribute('aria-controls'));
     const dismissTriggers = dialog2.querySelectorAll('[data-dismiss]');
 
     // open dialog
@@ -155,18 +155,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // close dialog
     dismissTriggers.forEach((dismissTrigger) => {
-      const dismissDialog = document.getElementById(dismissTrigger.dataset.dismiss);
+      const dismissDialog2 = document.getElementById(dismissTrigger.dataset.dismiss);
 
       dismissTrigger.addEventListener('click', (event) => {
         event.preventDefault();
 
-        close(dismissDialog);
+        close(dismissDialog2);
       });
     });
 
     window.addEventListener('click', (event) => {
-      if (event.target === dialog) {
-        close(dialog);
+      if (event.target === dialog2) {
+        close(dialog2);
       }
     });
   });
