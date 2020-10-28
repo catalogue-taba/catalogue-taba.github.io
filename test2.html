@@ -1,196 +1,17 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<meta charset="utf-8" />
+	<head>
+		<meta charset="utf-8" />
 		<title>Bibliothèque Municipale de Suarce</title>
-		
-  <style>
-    .dialog::backdrop
-{
-background-color: rgba(0, 0, 0, 0.7);	
-} 
- 
- .dialog 
- {
-    width: 90%;
-	height: 90%;
-	margin: auto;
-	border-radius: 40px;
-	padding: 0px;	
-	border: none;
-}
+		<link rel="stylesheet" href="styles_catalogue.css" />
+		<link rel="manifest" href="manifest.webmanifest">
+	</head>
 	
-.dialog p
-{
-	padding-right: 20px;
-	padding-left: 20px;
-	font-size: 1.1em;
-}
-button
-{
-	border: none;
-	
-}
-section p
-{
-	margin-bottom: 0px;
-}
-
-.bouton_fermer
-{
-	border-radius: 40px;
-	height: 80px;
-	width:80px;
-	outline: none;
-	position: absolute;
-	top: -20px;
-	right: -20px;
-	margin: 0px;
-	box-shadow: 2px 1px grey;
-	border: 1px grey solid;
-	background: url('croix.jpg'), grey;
-	background-size: 80px;
-	font-size: 0em;
-
-}
-.bouton_ouvrir
-{
-	margin-bottom: 5px;
-	margin-left: 5px;
-}
-header
-{
-	z-index: 500;
-}		
-header p
-{
-	font-size: 1.2em;
-	text-align: center;
-	margin-top: 0px;
-}
-body
-{
-	margin: 0px;
-	padding: 0px;
-	width: 100%;
-	
-}
-body a:hover
-{
-	color: black;
-}
-body a
-{
-	text-decoration: none;
-	color: black;
-}
-#bloc_page
-{
-	width: 95%;
-	margin: auto;
-}
-.header_categories
-{
-	height: 50px;
-	display: flex;
-	border-bottom: 1px black solid;
-	position: fixed;
-	width: 100%;
-	top: 0px;
-	left: 0px;
-	background-color: white;
-}
-.header_categories p
-{
-	width: 50%;
-	border-left: 1px black solid;
-	border-right: 1px black solid;
-	font-size: 1.8em;
-	height: 100%;
-}
-.header_categories a
-{
-	width: 25%;
-	text-align: center;
-	font-size: 1.3em;
-	background: rgba(250, 250, 250, 0.8);
-	height: 100%
-}
-section
-{
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-between;
-	margin-top: 60px;
-}
-.auteur
-{
-	font-size: 1.2em;
-	margin-bottom: 0px;
-}
-.titre
-{
-	font-size: 1.7em;
-	margin-bottom: 0px;
-	margin-top: 3px;
-}
-.titre_dialog
-{
-	font-size: 1.7em;
-	margin-bottom: 0px;
-	margin-top: 3px;
-	margin-left: 30px;
-}
-.article
-{
-	width: 29%;
-	box-shadow: 4px 4px 2px grey;
-	margin-bottom: 10px;
-	border-radius: 10px 10px 10px 10px;
-	border: 1px solid grey;
-	padding-right: 5px;
-	padding-left: 5px;
-	padding-bottom: 5px;
-	position: relative;
-}
-dialog p
-{
-	font-size: 2em;
-}
-button img
-{
-	max-width: 270px;
-}
-nav
-{
-	margin-top: 160px;
-	display: flex;
-	justify-content: space-around;
-	width: 100%;
-}
-nav p
-{
-	width: 20%;
-	border: 1px grey solid;
-	text-align: center;
-	height: 300px;
-	box-shadow: 4px 4px 2px grey;
-	border-radius: 20px;
-}
-nav a
-{
-	display: block;
-	width: 100%;
-	height: 100%;
-	font-size: 3em;
-	padding-top: 30px;
-}
-© 2020 GitHub, Inc.
-  </style>   
-</head>
-
 	<body>
-<header class="header_categories">
+	<div id="bloc_page">
+	
+	
+	<header class="header_categories">
 		<a href="adultes.html"> < retour</a>
 		<p>Adultes - Romans</p>
 		<a href="index.html">accueil</a>
@@ -205,7 +26,7 @@ nav a
 		<p class="titre">Mère épuisée</p>
 		<p class="année">2011</p>
 		
-      <div class="dialog" id="DialogExample1">
+      <dialog id="DialogExample1">
 	  <p class="auteur">Allenou Stéphanie       <span class="titre_dialog">Mère épuisée</span></p>
 	  
 
@@ -213,19 +34,78 @@ nav a
           Le récit poignant d'une mère ordinaire qui ose dire comment au fil des jours elle s'épuise, s'isole, se sent envahie de doutes et de peurs. Un témoignage qui rejoint le commun de chaque femme prise entre le bonheur d'être mère et la difficulté de vivre dans une société peu encline à entendre cette part non idéale et obscure de la maternité.
         </p>
         <button id="hide1" class="bouton_fermer">x</button>
-      </div>
+      </dialog>
 	  
       <button id="show1" class="bouton_ouvrir"><img src="https://www.babelio.com/couv/bm_32054_1473664.jpg" alt=""/></button>
     </div>
     <script type="text/JavaScript">
       (function() {  
-             var .dialog = document.getElementById('DialogExample1');  
-             document.getElementById('show1').onclick = function() { .dialog.showModal();  
+             var dialog = document.getElementById('DialogExample1');  
+             document.getElementById('show1').onclick = function() { dialog.showModal();  
          }; 
-           document.getElementById('hide1').onclick = function() { .dialog.close();  
+           document.getElementById('hide1').onclick = function() { dialog.close();  
         }; 
       })();
     </script>
-	</section>
-	</body>
+
+
+<div class="article">
+		<p class="auteur">Anglade Jean </p>
+		<p class="titre">Les cousins Belloc</p>
+		<p class="année">2014</p>
+		
+      <dialog id="DialogExample2">
+	  <p class="auteur">Anglade Jean       <span class="titre_dialog">Les cousins Belloc</span></p>
+	  
+
+        <p>
+          Auvergne, 1918. Depuis que leurs mères respectives, victimes de la grippe espagnole, ont rejoint leurs pères, morts pour la France, les deux cousins Vincent et Mauricet sont hébergés à Arlanc en Auvergne, l’un chez grand-mère Félistine, ouvrière en chapelets, l’autre chez grand-mère Yolande, dentellière de son état.
+Les deux garçons sont inséparables et c’est tout naturellement qu’ils vont en apprentissage, à Riom, chez le même charcutier. Ils sont tellement serviables qu’on les considère comme les fils de la maison. Jusqu’au jour où la patronne, s’alarmant de leur manque de curiosité pour le sexe opposé, se met en tête de trouver la femme idéale, capable de briser leur innocent et néanmoins troublant duo…
+
+        </p>
+        <button id="hide2" class="bouton_fermer">x</button>
+      </dialog>
+	  
+      <button id="show2" class="bouton_ouvrir"><img src="https://images-na.ssl-images-amazon.com/images/I/51hPRH-%2Br6L._SX210_.jpg" alt=""/></button>
+    </div>
+    <script type="text/JavaScript">
+      (function() {  
+             var dialog = document.getElementById('DialogExample2');  
+             document.getElementById('show2').onclick = function() { dialog.showModal();  
+         }; 
+           document.getElementById('hide2').onclick = function() { dialog.close();  
+        }; 
+      })();
+    </script>
+
+
+<div class="article">
+		<p class="auteur">Anglade Jean </p>
+		<p class="titre">Un souper de neige</p>
+		<p class="année">2000</p>
+		
+      <dialog id="DialogExample3">
+	  <p class="auteur">Anglade Jean       <span class="titre_dialog">Un souper de neige</span></p>
+	  
+
+        <p>
+          Le village de Saint-Coutain, établi sur la frontière départementale, se trouve partagé entre le Cantal et l'Aveyron. Il comporte donc deux mairies, deux écoles, deux bureaux de poste, deux églises, deux saints patrons : saint Christophe et saint Nicol. Les esprits y sont aussi partagés que les territoires. On vote à gauche d'un côté, à droite de l'autre. Des vaches rouges broutent l'herbe auvergnate, des blondes broutent l'herbe rouergate. A un étal aveyronnais, le petit Léonce Bros vole une orange qu'il destine à Flora, sa " soeur " de sentiment. Tirabi, le garde champêtre " nicolaud ", le poursuit et l'arrête en terre cantalienne. Le voici accusé d'enlèvement d'enfant. Afin de préciser la limite exacte de leurs communes, les deux maires décident de faire peindre sur le sol une ligne frontière. Cette ligne blanche devient une curiosité touristique. Mais elle sépare davantage encore Léonce et Flora, pauvres Roméo et Juliette de dix ans. Leur amour contrarié poussera Léonce à quitter Saint-Coutain. Il fera carrière à Paris comme garçon dans des brasseries auvergnates ou aveyronnaises. Un jour, il reviendra...
+        </p>
+        <button id="hide3" class="bouton_fermer">x</button>
+      </dialog>
+	  
+      <button id="show3" class="bouton_ouvrir"><img src="https://www.babelio.com/couv/bm_CVT_Un-souper-de-neige_4538.jpg" alt=""/></button>
+    </div>
+    <script type="text/JavaScript">
+      (function() {  
+             var dialog = document.getElementById('DialogExample3');  
+             document.getElementById('show3').onclick = function() { dialog.showModal();  
+         }; 
+           document.getElementById('hide3').onclick = function() { dialog.close();  
+        }; 
+      })();
+    </script>
+		</section>
+		</div>
+		</body>
 		</html>
