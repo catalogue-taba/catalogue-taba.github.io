@@ -10,7 +10,7 @@
 background-color: rgba(0, 0, 0, 0.7);	
 } 
  
- dialog 
+ .dialog 
  {
     width: 90%;
 	height: 90%;
@@ -20,7 +20,7 @@ background-color: rgba(0, 0, 0, 0.7);
 	border: none;
 }
 	
-dialog p
+.dialog p
 {
 	padding-right: 20px;
 	padding-left: 20px;
@@ -207,7 +207,7 @@ nav a
 		<p class="titre">Mère épuisée</p>
 		<p class="année">2011</p>
 		
-      <dialog id="DialogExample1">
+      <div class="dialog" id="DialogExample1">
 	  <p class="auteur">Allenou Stéphanie       <span class="titre_dialog">Mère épuisée</span></p>
 	  
 
@@ -215,16 +215,16 @@ nav a
           Le récit poignant d'une mère ordinaire qui ose dire comment au fil des jours elle s'épuise, s'isole, se sent envahie de doutes et de peurs. Un témoignage qui rejoint le commun de chaque femme prise entre le bonheur d'être mère et la difficulté de vivre dans une société peu encline à entendre cette part non idéale et obscure de la maternité.
         </p>
         <button id="hide1" class="bouton_fermer">x</button>
-      </dialog>
+      </div>
 	  
       <button id="show1" class="bouton_ouvrir"><img src="https://www.babelio.com/couv/bm_32054_1473664.jpg" alt=""/></button>
     </div>
     <script type="text/JavaScript">
       (function() {  
-             var dialog = document.getElementById('DialogExample1');  
-             document.getElementById('show1').onclick = function() { dialog.showModal();  
+             var .dialog = document.getElementById('DialogExample1');  
+             document.getElementById('show1').onclick = function() { .dialog.showModal();  
          }; 
-           document.getElementById('hide1').onclick = function() { dialog.close();  
+           document.getElementById('hide1').onclick = function() { .dialog.close();  
         }; 
       })();
     </script>
