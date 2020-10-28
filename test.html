@@ -201,6 +201,32 @@ nav a
 
 </head>
 <body>
+	<div class="article">
+		<p class="auteur">Allenou Stéphanie </p>
+		<p class="titre">Mère épuisée</p>
+		<p class="année">2011</p>
+		
+      <dialog id="DialogExample1">
+	  <p class="auteur">Allenou Stéphanie       <span class="titre_dialog">Mère épuisée</span></p>
+	  
+
+        <p>
+          Le récit poignant d'une mère ordinaire qui ose dire comment au fil des jours elle s'épuise, s'isole, se sent envahie de doutes et de peurs. Un témoignage qui rejoint le commun de chaque femme prise entre le bonheur d'être mère et la difficulté de vivre dans une société peu encline à entendre cette part non idéale et obscure de la maternité.
+        </p>
+        <button id="hide1" class="bouton_fermer">x</button>
+      </dialog>
+	  
+      <button id="show1" class="bouton_ouvrir"><img src="https://www.babelio.com/couv/bm_32054_1473664.jpg" alt=""/></button>
+    </div>
+    <script type="text/JavaScript">
+      (function() {  
+             var dialog = document.getElementById('DialogExample1');  
+             document.getElementById('show1').onclick = function() { dialog.showModal();  
+         }; 
+           document.getElementById('hide1').onclick = function() { dialog.close();  
+        }; 
+      })();
+    </script>
     <div class="js-page">
   <main class="js-document">
     
