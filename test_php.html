@@ -17,7 +17,7 @@ function openFFPromotionPopup() {
   if (WindowObjectReference == null || WindowObjectReference.closed) {
     /* si le pointeur vers l'objet window n'existe pas, ou s'il existe
        mais que la fenêtre a été fermée */
-    WindowObjectReference = window.open("http://www.spreadfirefox.com/",
+    WindowObjectReference = window.open("https://developer.mozilla.org/fr/docs/Web/API/Window/open",
            "PromoteFirefoxWindowName", "resizable=yes,scrollbars=yes,status=yes");
     /* alors, création du pointeur. La nouvelle fenêtre sera créée par dessus
        toute autre fenêtre existante. */
