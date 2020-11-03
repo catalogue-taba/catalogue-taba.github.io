@@ -8,6 +8,35 @@
 <a href="http://pmb.territoiredebelfort.fr/mybibli421_2/opac_css/index.php?cms_build_activate=1&lvl=cmspage&pageid=4">test</a>
 <section>
 <p>test</p>
+  
+	  
+    <script type="text/javascript">
+var WindowObjectReference = null; // variable globale
+
+function openFFPromotionPopup() {
+  if (WindowObjectReference == null || WindowObjectReference.closed) {
+    /* si le pointeur vers l'objet window n'existe pas, ou s'il existe
+       mais que la fenêtre a été fermée */
+    WindowObjectReference = window.open("http://www.spreadfirefox.com/",
+           "PromoteFirefoxWindowName", "resizable=yes,scrollbars=yes,status=yes");
+    /* alors, création du pointeur. La nouvelle fenêtre sera créée par dessus
+       toute autre fenêtre existante. */
+  }
+  else {
+    WindowObjectReference.focus();
+    /* sinon, la référence à la fenêtre existe et la fenêtre n'a pas été 
+       fermée: la fenêtre est peut-être minimisée ou derrière la fenêtre 
+       principale. Par conséquent, on peut l'amener par dessus les autres à
+       l'aide de la méthode focus(). Il n'est pas nécessaire de recréer la fenêtre
+       ou de recharger la ressource référencée. */
+  };
+}
+</script>
+
+(...)
+
+<p><a href="http://www.spreadfirefox.com/" target="PromoteFirefoxWindowName" onclick="openFFPromotionPopup(); return false;" title="Ce lien créera une nouvelle fenêtre ou en réutilisera une déjà ouverte">Promouvoir
+l'adoption de Firefox</a></p>
 </section>
 </body>
 </html>
