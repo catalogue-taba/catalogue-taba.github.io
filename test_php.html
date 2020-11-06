@@ -9,7 +9,7 @@
 <section>
 <iframe id="rss" name="preview" sandbox="allow-scripts" src=" http://pmb.territoiredebelfort.fr/mybibli421_2/opac_css/rss.php?id=2">
 	</iframe>
-<script>$.get(FEED_URL, function (data) {
+<script>$.get(" http://pmb.territoiredebelfort.fr/mybibli421_2/opac_css/rss.php?id=2", function (data) {
     $(data).find("entry").each(function () {
         var el = $(this);
         console.log("------------------------");
