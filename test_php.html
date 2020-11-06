@@ -8,27 +8,32 @@
 <body>
 
 <section>
-<iframe width="80%" src="https://catalogue-taba.github.io/test_frame.html"></iframe>
-	<script src="//rss.bloople.net/?url=http%3A%2F%2Fpmb.territoiredebelfort.fr%2Fmybibli421_2%2Fopac_css%2Frss.php%3Fid%3D2&showtitle=false&type=js"></script>
-<script>
-	jQuery.getFeed({
-    "http://pmb.territoiredebelfort.fr/mybibli421_2/opac_css/rss.php?id=2" : FEED_URL,
-   success : function (feed) {
-      console.log(feed.title);
-      // do more stuff here
-   }
-});
-	$.get(FEED_URL, function (data) {
-    $(data).find("entry").each(function () {
-        var el = $(this);
-        console.log("------------------------");
-        console.log("title : " + el.find("title").text());
-        console.log("author : " + el.find("author").text());
-        console.log("description: " + el.find("description").text());
-    });
-});
-	</script>
+ 
+<div class="article">
+		<p class="auteur">#authors_by_type_with_tpl(0,1,\,,\,,0,1,70\,71\,72,{name} {rejete});  </p>
+		<p class="titre">#title();</p>
+		<p class="année">#year_publication();</p>
+		
+      <dialog id="DialogExample#notice_field(id);">
+	  <p class="auteur"> #authors_by_type_with_tpl(0,1,\,,\,,0,1,70\,71\,72,{name} |{rejete});      <span class="titre_dialog">#title</span></p>
+	  
 
+        <p>#resume();
+        </p>
+        <button id="hide#notice_field(id);" class="bouton_fermer">x</button>
+      </dialog>
+	  
+       id="show#notice_field(id);" class="bouton_ouvrir"><img src="#img_url();" alt=""/></button>
+    </div>
+    <script type="text/JavaScript">
+      (function() {  
+             var dialog = document.getElementById('DialogExample#notice_field(id);');  
+             document.getElementById('show#notice_field(id)').onclick = function() { dialog.showModal();  
+         }; 
+           document.getElementById('hide#notice_field(id);').onclick = function() { dialog.close();  
+        }; 
+      })();
+    </script>
 </section>
 </body>
 </html>
