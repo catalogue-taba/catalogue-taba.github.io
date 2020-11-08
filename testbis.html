@@ -202,89 +202,51 @@ nav a
 	
 
 	
-	<div class="article">
-		<p class="auteur">Allenou Stéphanie ggg</p>
-		<p class="titre">Mère épuisée</p>
-		<p class="année">2011</p>
-		
-      <div class="dialog" id="DialogExample1">
-	  <p class="auteur">Allenou Stéphanie       <span class="titre_dialog">Mère épuisée</span></p>
-	  
+	<form>
+      <label for="verse-choose">Choose a verse</label>
+      <select id="verse-choose" name="verse-choose">
+        <option>Verse 1</option>
+        <option>Verse 2</option>
+        <option>Verse 3</option>
+        <option>Verse 4</option>
+      </select>
+    </form>
 
-        <p>
-          Le récit poignant d'une mère ordinaire qui ose dire comment au fil des jours elle s'épuise, s'isole, se sent envahie de doutes et de peurs. Un témoignage qui rejoint le commun de chaque femme prise entre le bonheur d'être mère et la difficulté de vivre dans une société peu encline à entendre cette part non idéale et obscure de la maternité.
-        </p>
-        <button id="hide1" class="bouton_fermer">x</button>
-      </div>
-	  
-      <button id="show1" class="bouton_ouvrir"><img src="https://www.babelio.com/couv/bm_32054_1473664.jpg" alt=""/></button>
-    </div>
-    <script type="text/JavaScript">
-      (function() {  
-             var .dialog = document.getElementById('DialogExample1');  
-             document.getElementById('show1').onclick = function() { .dialog.showModal();  
-         }; 
-           document.getElementById('hide1').onclick = function() { .dialog.close();  
-        }; 
-      })();
-    </script>
+    <h2>The Conqueror Worm, <em>Edgar Allen Poe, 1843</em></h2>
 
+    <pre>
 
-<div class="article">
-		<p class="auteur">Anglade Jean </p>
-		<p class="titre">Les cousins Belloc</p>
-		<p class="année">2014</p>
-		
-      <dialog id="DialogExample2">
-	  <p class="auteur">Anglade Jean       <span class="titre_dialog">Les cousins Belloc</span></p>
-	  
+    </pre>
 
-        <p>
-          Auvergne, 1918. Depuis que leurs mères respectives, victimes de la grippe espagnole, ont rejoint leurs pères, morts pour la France, les deux cousins Vincent et Mauricet sont hébergés à Arlanc en Auvergne, l’un chez grand-mère Félistine, ouvrière en chapelets, l’autre chez grand-mère Yolande, dentellière de son état.
-Les deux garçons sont inséparables et c’est tout naturellement qu’ils vont en apprentissage, à Riom, chez le même charcutier. Ils sont tellement serviables qu’on les considère comme les fils de la maison. Jusqu’au jour où la patronne, s’alarmant de leur manque de curiosité pour le sexe opposé, se met en tête de trouver la femme idéale, capable de briser leur innocent et néanmoins troublant duo…
+    <script>
+      var verseChoose = document.querySelector('select');
+      var poemDisplay = document.querySelector('pre');
 
-        </p>
-        <button id="hide2" class="bouton_fermer">x</button>
-      </dialog>
-	  
-      <button id="show2" class="bouton_ouvrir"><img src="https://images-na.ssl-images-amazon.com/images/I/51hPRH-%2Br6L._SX210_.jpg" alt=""/></button>
-    </div>
-    <script type="text/JavaScript">
-      (function() {  
-             var dialog = document.getElementById('DialogExample2');  
-             document.getElementById('show2').onclick = function() { dialog.showModal();  
-         }; 
-           document.getElementById('hide2').onclick = function() { dialog.close();  
-        }; 
-      })();
-    </script>
+      verseChoose.onchange = function() {
+        var verse = verseChoose.value;
+        updateDisplay(verse);
+      };
+
+      function updateDisplay(verse) {
+        verse = verse.replace(" ", "");
+        verse = verse.toLowerCase();
+        var url = verse + '.txt';
+
+        var request = new XMLHttpRequest();
+        request.open('GET', url);
+        request.responseType = 'text';
+
+        request.onload = function() {
+          poemDisplay.textContent = request.response;
+        };
+
+        request.send();
+      };
+
+      updateDisplay('Verse 1');
+      verseChoose.value = 'Verse 1';
 
 
-<div class="article">
-		<p class="auteur">Anglade Jean </p>
-		<p class="titre">Un souper de neige</p>
-		<p class="année">2000</p>
-		
-      <dialog id="DialogExample3">
-	  <p class="auteur">Anglade Jean       <span class="titre_dialog">Un souper de neige</span></p>
-	  
-
-        <p>
-          Le village de Saint-Coutain, établi sur la frontière départementale, se trouve partagé entre le Cantal et l'Aveyron. Il comporte donc deux mairies, deux écoles, deux bureaux de poste, deux églises, deux saints patrons : saint Christophe et saint Nicol. Les esprits y sont aussi partagés que les territoires. On vote à gauche d'un côté, à droite de l'autre. Des vaches rouges broutent l'herbe auvergnate, des blondes broutent l'herbe rouergate. A un étal aveyronnais, le petit Léonce Bros vole une orange qu'il destine à Flora, sa " soeur " de sentiment. Tirabi, le garde champêtre " nicolaud ", le poursuit et l'arrête en terre cantalienne. Le voici accusé d'enlèvement d'enfant. Afin de préciser la limite exacte de leurs communes, les deux maires décident de faire peindre sur le sol une ligne frontière. Cette ligne blanche devient une curiosité touristique. Mais elle sépare davantage encore Léonce et Flora, pauvres Roméo et Juliette de dix ans. Leur amour contrarié poussera Léonce à quitter Saint-Coutain. Il fera carrière à Paris comme garçon dans des brasseries auvergnates ou aveyronnaises. Un jour, il reviendra...
-        </p>
-        <button id="hide3" class="bouton_fermer">x</button>
-      </dialog>
-	  
-      <button id="show3" class="bouton_ouvrir"><img src="https://www.babelio.com/couv/bm_CVT_Un-souper-de-neige_4538.jpg" alt=""/></button>
-    </div>
-    <script type="text/JavaScript">
-      (function() {  
-             var dialog = document.getElementById('DialogExample3');  
-             document.getElementById('show3').onclick = function() { dialog.showModal();  
-         }; 
-           document.getElementById('hide3').onclick = function() { dialog.close();  
-        }; 
-      })();
     </script>
 		</section>
 		</div>
