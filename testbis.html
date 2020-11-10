@@ -217,7 +217,7 @@ var x=xmlDoc.getElementsByTagName("notice");
 for (i=0;i<x.length;i++)
 {
 document.write("<tr><td>");
-document.write(x[i].getElementsByTagName("zoneNotes/resume")[0].childNodes[0].nodeValue);
+document.write(x[i].getElementsByTagName("resume")[0].childNodes[0].nodeValue);
 document.write("</td><td>");
 document.write(x[i].getElementsByTagName("titrePrincipal")[0].childNodes[0].nodeValue);
 document.write("</td></tr>");
@@ -247,10 +247,10 @@ document.write("</table>");
     </div>
     <script type="text/JavaScript">
       (function() {  
-             var dialog = document.getElementById('DialogExample1');  
-             document.getElementById('show1').onclick = function() { dialog.showModal();  
+             var dialog = document.getElementById('DialogExample<span datafld="idNotice></span>');  
+             document.getElementById('show<span datafld="idNotice"></span>').onclick = function() { dialog.showModal();  
          }; 
-           document.getElementById('hide1').onclick = function() { dialog.close();  
+           document.getElementById('hide<span datafld="idNotice"></span>').onclick = function() { dialog.close();  
         }; 
       })();
     </script>
