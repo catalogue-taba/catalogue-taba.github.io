@@ -140,6 +140,7 @@ li
 }
 .article
 {
+	display: block;
 	width: 29%;
 	box-shadow: 4px 4px 2px grey;
 	margin-bottom: 10px;
@@ -149,7 +150,6 @@ li
 	padding-left: 5px;
 	padding-bottom: 5px;
 	position: relative;
-	list-type: none;
 }
 dialog p
 {
