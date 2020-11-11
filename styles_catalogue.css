@@ -145,6 +145,7 @@ section
 	padding-left: 5px;
 	padding-bottom: 5px;
 	position: relative;
+	list-type: none;
 }
 dialog p
 {
