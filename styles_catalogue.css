@@ -24,7 +24,7 @@ button
 	border: none;
 	
 }
-section p
+#section p
 {
 	margin-bottom: 0px;
 }
@@ -109,7 +109,7 @@ body a
 	background: rgba(250, 250, 250, 0.8);
 	height: 100%
 }
-section
+#section
 {
 	display: flex;
 	flex-wrap: wrap;
