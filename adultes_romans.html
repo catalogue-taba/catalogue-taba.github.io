@@ -60,7 +60,18 @@ Qui gardera le domaine et fera fructifier l'entreprise de distillerie de Gilleps
            document.getElementById('hide64').onclick = function() { dialog.close();  
         }; 
       })();
-    </script><br /><li class="article">
+    </script><br />
+		<script type="text/JavaScript">
+     var mylist = $('#section'); 
+var listitems = mylist.children('li').get(); 
+listitems.sort(function(a, b) { 
+    return $(a).text().toUpperCase().localeCompare($(b).text().toUpperCase()); 
+}) 
+$.each(listitems, function(idx, itm) { mylist.append(itm); });
+		
+</script>
+		
+		<li class="article">
 		<p class="auteur"> Chalayer Maurice </p>
 		<p class="titre">La ferme des silences</p>
 		<p class="année">2014</p>
