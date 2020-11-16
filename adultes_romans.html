@@ -5,6 +5,16 @@
 		<title>Bibliothèque Municipale de Suarce</title>
 		<link rel="stylesheet" href="styles_catalogue.css" />
 		<link rel="manifest" href="manifest.webmanifest">
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script type="text/JavaScript">
+     var mylist = $('#section'); 
+var listitems = mylist.children('li').get(); 
+listitems.sort(function(a, b) { 
+    return $(a).text().toUpperCase().localeCompare($(b).text().toUpperCase()); 
+}) 
+$.each(listitems, function(idx, itm) { mylist.append(itm); });
+		
+</script>
 	</head>
 	
 	<body>
@@ -10594,15 +10604,6 @@ Un roman qui explore les différentes formes de la gratitude.
       })();
     </script>
 	
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-    <script type="text/JavaScript">
-     var mylist = $('#section'); 
-var listitems = mylist.children('li').get(); 
-listitems.sort(function(a, b) { 
-    return $(a).text().toUpperCase().localeCompare($(b).text().toUpperCase()); 
-}) 
-$.each(listitems, function(idx, itm) { mylist.append(itm); });
-		
-</script>
+	
 </ul></div>
 </body></html>
