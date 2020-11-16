@@ -1,3 +1,14 @@
+li {
+		text-align: left;
+		}
+		ul {
+		list-style-type: none;
+		}
+		ul {
+		padding-inline-start: 0px;
+		margin-block-start: 0px;
+		margin-block-end: 0px;
+		}
 dialog::backdrop
 {
 background-color: rgba(0, 0, 0, 0.7);	
