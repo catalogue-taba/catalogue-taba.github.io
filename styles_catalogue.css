@@ -1,22 +1,20 @@
 li {
-		text-align: left;
-		}
-		ul {
-		list-style-type: none;
-		}
-		ul {
-		padding-inline-start: 0px;
-		margin-block-start: 0px;
-		margin-block-end: 0px;
+	text-align: left;
+}
+ul {
+	list-style-type: none;
+	padding-inline-start: 0px;
+	margin-block-start: 0px;
+	margin-block-end: 0px;
 		}
 dialog::backdrop
 {
-background-color: rgba(0, 0, 0, 0.7);	
+	background-color: rgba(0, 0, 0, 0.7);	
 } 
  
  dialog 
  {
-    width: 90%;
+	width: 90%;
 	height: 90%;
 	margin: auto;
 	border-radius: 40px;
@@ -164,7 +162,9 @@ dialog p
 }
 button img
 {
-	max-width: 270px;
+	max-width: 80%;
+	margin: 1px;
+	
 }
 nav
 {
