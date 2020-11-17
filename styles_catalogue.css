@@ -82,6 +82,7 @@ header
 	padding-bottom: 5px;
 	position: relative;
 	text-align: left;
+	max-height: 460px;
 }
 .auteur
 {
