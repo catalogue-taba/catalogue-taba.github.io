@@ -1,0 +1,138 @@
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=iso8859-1">
+<style>
+input[type=text], select {
+     text-align: center;
+     text-align-last: center;
+}
+#choix_co_alert[type=text], #choix_co_alert {
+     text-align: center;
+     text-align-last: center;
+	 color: red;
+}
+</style>
+
+<body>
+
+<h2 style="margin-top:20px;">Accès rapide</h2>
+		<div id="liste_deroulante" style="width:90%; display: flex; margin-top:10px; margin-bottom:20px;">
+				<div class="titre_centre" style="display:flex; justify-content:space-between; width:80%;">
+					<select id="choix_dep" name="choix_dep" class="liste" onchange='charger_ressources(this.value)' style="width:48%; height:20px; border-radius:10px;">
+						<option value="00" style="color: #CCCCCC;">--Sélectionnez une ressource--</option>
+						<optgroup label="Autoformation">
+						<option value="01">Toutapprendre</option>
+						<optgroup label="Cinéma">
+						<option value="02">Médiathèque numérique</option>
+						<option value="03">Les yeux docs</option>
+						<option value="04">Les agriculteurs face à la ville</option>
+						<optgroup label="Livres numériques">
+						<option value="05">BiblioAccess</option>
+						<option value="06">Story play'r</option>
+						<optgroup label="Musique">
+						<option value="07">diMusic</option>
+						<option value="08">Série interstices</option>
+						<optgroup label="Presse">
+						<option value="09">LeKiosk</option>
+					</select>
+					
+					<div id="calque_ressource" class="liste_div" style="width:48%;">
+					&nbsp;
+					</div>	
+					
+				</div>
+					
+					<div id="calque_valid" class="liste_div" style="width:10%; display:flex; align-items;center;">
+					&nbsp;
+					</div>
+		</div>
+		
+		<script type="text/javascript" language="javascript">
+function charger_ressources(choix_dep)
+{
+var dep_texte = document.getElementById('choix_dep').value;
+var le_dep = dep_texte.substr(0,2);
+if(le_dep!='00')
+{
+chaine_liste = '<select id="choix_co" name="choix_co" class="liste" onChange="verif_co(this.value)" style="width:100%; height:20px; border-radius:10px;">';
+chaine_liste += '<option value="selection" style="color: #CCCCCC;">--Inscription ou connexion--</option>';
+if(le_dep=='01')
+{
+chaine_liste += '<option value="http://biblio.toutapprendre.com/inscrire/?e=128">inscription</option>';
+chaine_liste += '<option value="https://biblio.toutapprendre.com/newbiblio/">connexion</option>';
+}
+if(le_dep=='02')
+{
+chaine_liste += '<option value="https://portal.mediatheque-numerique.com/inscription-utilisateur-etape-1">inscription</option>';
+chaine_liste += '<option value="https://portal.mediatheque-numerique.com/login?return_url=https%3A%2F%2Fvod.mediatheque-numerique.com%2F">connexion</option>';
+}
+if(le_dep=='03')
+{
+chaine_liste += '<option value="https://portal.mediatheque-numerique.com/inscription-utilisateur-etape-1">inscription</option>';
+chaine_liste += '<option value="https://portal.mediatheque-numerique.com/login?return_url=https://www.lesyeuxdoc.fr/">connexion</option>';
+}
+if(le_dep=='04')
+{
+chaine_liste += '<option value="http://www.agriculteursfacealaville.com/">Accéder</option>';
+}
+if(le_dep=='05')
+{
+chaine_liste += '<option value="https://www.biblioaccess.com/858/Account/Register">inscription</option>';
+chaine_liste += '<option value="https://www.biblioaccess.com/858/Account/Login?returnUrl=https%3A%2F%2Fwww.biblioaccess.com%2F858">connexion</option>';
+}
+if(le_dep=='06')
+{
+chaine_liste += '<option value="https://www.storyplayr.com/mediatheque/member-signup?mediathequeid=d7b5d53c-16c4-4178-a52b-7404d5c2e1d9&mediathequename=Territoire%20de%20Belfort">inscription</option>';
+chaine_liste += '<option value="https://www.storyplayr.com/login">connexion</option>';
+}
+if(le_dep=='07')
+{
+chaine_liste += '<option value="mail_dimusic" style="color:#CCCCCC;">inscription par mail</option>';
+chaine_liste += '<option value="https://accounts.divercities.eu/users/sign_in">connexion</option>';
+}
+if(le_dep=='08')
+{
+chaine_liste += '<option value="http://www.espacemultimediagantner.territoiredebelfort.fr/podcasts-audio/">Accéder</option>';
+}
+if(le_dep=='09')
+{
+chaine_liste += '<option value="mail_lekiosk" style="color:#CCCCCC;">inscription par mail</option>';
+chaine_liste += '<option value="http://www.espacemultimediagantner.cg90.net/lekiosk/">connexion</option>';
+}
+chaine_liste += '</select>';
+document.getElementById('calque_ressource').innerHTML = chaine_liste;
+document.getElementById('calque_valid').innerHTML = '<p></p>';
+}
+if(le_dep=='00')
+{
+alert('Veuillez préciser une ressource');
+chaine_liste2 = '<select id="choix_co_alert" name="choix_co" class="liste" onChange="verif_co(this.value)" style="width:100%; height:20px; border-radius:10px;">';
+chaine_liste2 += '<option value="selection" style="color: #CCCCCC;">--Choisissez une ressource--</option>';
+chaine_liste2 += '</select>';
+document.getElementById('calque_ressource').innerHTML = chaine_liste2;
+document.getElementById('calque_valid').innerHTML = '<p></p>';
+}
+}
+function verif_co(dep_texte)
+{
+if(document.getElementById('choix_co').value == 'selection')
+{
+alert('Veuillez préciser inscription ou connexion');
+document.getElementById('calque_valid').innerHTML = '<p></p>';
+}
+else if(document.getElementById('choix_co').value == 'mail_dimusic')
+{
+alert('L\'inscrption à cette ressource se fait par mail. \n Envoyez votre demande avec vos nom, prénom, n°d\'abonné et votre bibliothèque d\'appartenance \(Surace\) à \n abonnementsenligne@territoiredebelfort.fr');
+document.getElementById('calque_valid').innerHTML = '<p></p>';
+}
+else if(document.getElementById('choix_co').value == 'mail_lekiosk')
+{
+alert('L\'inscription à cette ressource se fait par mail. \n Envoyez votre demande avec vos nom et prénom à \n bibliotheque.suarce90@gmail.com');
+document.getElementById('calque_valid').innerHTML = '<p></p>';
+}
+else if((document.getElementById('choix_co').value != 'mail_dimusic') && (document.getElementById('choix_co').value != 'mail_lekiosk')&&(document.getElementById('choix_co').value != 'selection'))
+document.getElementById('calque_valid').innerHTML = '<a href="' + document.getElementById('choix_co').value + '" style="border:1px black solid; border-radius:10px; margin-left:15px; height:20px; display:flex; align-items:center;"><p style="margin:0; padding-right:10px; padding-left:10px; text-align:center;">OK</p></a>';
+}
+</script>
+</body>
+</html>
