@@ -1,0 +1,101 @@
+#cal_calendrier
+{
+    border:1px solid black;
+    padding:1px;
+    width:300px;
+    margin:auto;
+    height:200px;
+	border-collapse: collapse;
+}
+#en_tete{
+    padding:1px;
+    width:250px;
+	height: 25px;
+    margin:auto;
+	display: flex;
+	justify-content: space-between;
+}
+#titre
+{
+	padding: 1px;
+}
+#titre p
+{
+	margin: 0;
+}
+button
+{
+	height: 20px;
+	border: none;
+	background-color: white;
+}
+img
+{
+	margin-top: 2px;
+	width: 15px;
+}
+.cal_j_semaines th
+{
+	background-color: rgb(239, 239, 239);
+}
+
+#cal_calendrier td
+{
+    text-align:center;
+}
+.cal_aujourdhui
+{
+	font-weight: bold;
+	text-decoration: underline;
+}
+.cal_jours_av_ap
+{
+    color:#5a779e;
+}
+.maternelles
+{
+	border-radius: 50%;
+	background-color: #F0A935;
+}
+.bricolages
+{
+	border-radius: 50%;
+	background-color: #506bad;
+}
+.maternelles_aff
+{
+	color: #F0A935;
+}
+.bricolages_aff
+{
+	color: #506bad;
+}
+.lien
+{
+	margin-top: 0px;
+}
+.aff_event
+{
+	display: inline-block;
+	margin-bottom: 0px;
+	margin-top: 3px;
+}
+#legende
+{
+	width: 300px;
+	margin: auto;
+	display: flex;
+	justify-content: space-between;
+	font-size: 14px;
+}
+#afficher_dates
+{
+	width: 300px;
+	margin: auto;
+}
+#afficher_dates p
+{
+	margin-top: 0px;
+	margin-bottom: 6px;
+	font-weight: bold;
+}

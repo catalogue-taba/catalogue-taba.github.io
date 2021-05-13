@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset = "utf-8">
+<link rel="stylesheet" media="screen, print, handheld" type="text/css" href="calendrier.css" />
+<script type="text/javascript" src="agenda_.js"></script>
+</head>
+
+<body>
+
+<div id="a_cache" style="display:none;">
+<form id="cache">
+</form>
+</div>
+
+<div id="en_tete">
+<button type="button" id="precedent"><img src="prec.png"/></button>
+<div id="titre"></div>
+<button type="button" id="suivant"><img src="suiv.png"/></button>
+</div>
+
+
+<table id="cal_calendrier">
+</table>
+
+<div id="legende">
+	<div id="maternelles">
+	<div style="width:10px;height:10px;background-color:#F0A935;display:inline-block;margin-bottom:0px;"></div>
+	<p class="aff_event">Accueils maternelles</p>
+	<p class="lien"><a href="">voir le planning</a></p>
+	</div>
+	
+	<div id="bricolages">
+	<div style="width:10px;height:10px;background-color:#506bad;display:inline-block;margin-bottom:0px"></div>
+	<p class="aff_event">Ateliers bricolages</p>
+	<p class="lien"><a href="">voir toutes les dates</a></p>
+	</div>
+</div>
+	
+	<div id="afficher_dates">
+	</div>
+	
+
+<script>
+date();
+afficher_titre();
+calendrier();
+affichage_event();
+
+(function() {   
+	document.getElementById('suivant').onclick = function() { suivant();  
+         };       
+      })();
+	function suivant() {
+		var mois = document.getElementById('mois').value;
+		var verif_annee = document.getElementById('annee').value;
+		if(mois==11) 
+			{
+			var mois_suivant = 0;
+			var annee_suivant = Number(verif_annee) + 1;
+			}
+		else 
+			{
+			var mois_suivant = Number(mois) + 1;
+			var annee_suivant = verif_annee;
+			}
+
+document.getElementById('cache').innerHTML = '<input type="button" id="jour" value="1"/><input type="button" id="mois" value="'+mois_suivant+'"/><input type="button" id="annee" value="'+annee_suivant+'"/>';
+
+afficher_titre();
+calendrier();
+}
+
+(function() {   
+	document.getElementById('precedent').onclick = function() { precedent();  
+         };       
+      })();
+	function precedent() {
+		var mois = document.getElementById('mois').value;
+	var verif_annee = document.getElementById('annee').value;
+	if(mois==0) 
+		{
+		var mois_precedent = 11;
+		var annee_precedent = Number(verif_annee) - 1;
+		}
+	else 
+		{
+		var mois_precedent = Number(mois) - 1;
+		var annee_precedent = verif_annee; 
+		}
+
+document.getElementById('cache').innerHTML = '<input type="button" id="jour" value="1"/><input type="button" id="mois" value="'+mois_precedent+'"/><input type="button" id="annee" value="'+annee_precedent+'"/>';
+
+afficher_titre();
+calendrier();
+}
+</script>
+</body>
+</html>
